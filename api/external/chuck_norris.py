@@ -40,7 +40,7 @@ class ApiChuckNorris:
 
         return response['value']
     
-    def get_filter_random_joke(self, query='', limit=0):
+    def get_filter_random_joke(self, query, limit):
         '''
             Método responsável por coletar uma piada aleatória para a palavra escolhida.
             Args:
@@ -53,7 +53,10 @@ class ApiChuckNorris:
         response = requests.get(url=url).json()
 
         if response.get('status'):
-            if response['status'] == 404:
-                return (404, response['message'])
+            if response['status'] == 404 or response['status'] == 400:
+                return (response['status'], response['message'])
+        
+        if response['total'] == 0:
+            return (404, "No jokes found.")
 
         return response['result'][:limit]
