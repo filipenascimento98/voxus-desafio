@@ -1,4 +1,4 @@
-# Sistema Jokes - Desafio Técnico Voxus
+# Desafio Técnico Voxus
 
 Nesse projeto temos a implementação de uma API como solução para o problema apresentado no desafio técnico para o processo seletivo de desenvolvedor Python.
 
@@ -26,7 +26,7 @@ docker-compose up -d
 Assim, a aplicação será executada em um container Docker.
 
 # Rotas disponíveis
-Nessa API temos rotas que retornam piadas com base em alguns parâmetros de busca. A documentação das rotas pode ser acessada através do seguinte endpoint:
+Nessa API temos rotas que retornam piadas do Chuck Norris com base em alguns parâmetros de busca. A documentação das rotas pode ser acessada através do seguinte endpoint:
 
 ```bash
 {url_base}/docs/
