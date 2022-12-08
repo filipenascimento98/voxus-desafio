@@ -32,8 +32,6 @@ Nessa API temos rotas que retornam piadas do Chuck Norris com base em alguns par
 {url_base}/docs/
 ```
 
-<<<<<<< HEAD
-=======
 # Estrutura do projeto
 Uma breve explicação de alguns elementos estruturais desse projeto.
 * api: Único app dessa aplicação.
@@ -41,7 +39,6 @@ Uma breve explicação de alguns elementos estruturais desse projeto.
     * domain: Camada responsável pela regra de negócio e manipulação dos dados para serem repassados as views.
     * external: Camada de comunicação com as API's de terceiros.
     * tests: Diretório que armazena os testes automatizados.
->>>>>>> develop
 # Testes automatizados
 
 Para executar os testes automatizados navegue até o diretório onde se encontra o arquivo __manage.py__ e execute o seguinte comando:
