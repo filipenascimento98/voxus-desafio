@@ -24,7 +24,6 @@ class JokesDomain:
     def get_filter_random_joke(self, search, limit):
         if not search or not limit:
             return (400, "search and limit are required.")
-
         data_joke = self.api_chuck.get_filter_random_joke(query=str(search), limit=int(limit))
 
         if isinstance(data_joke, tuple):
