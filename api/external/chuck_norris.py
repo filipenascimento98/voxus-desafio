@@ -8,30 +8,15 @@ class ApiChuckNorris:
     def __build_url(self, url):
         return self.url_base + url
     
-    def get_random_joke(self):
+    def get_joke(self, url):
         '''
-            Método responsável por coletar uma piada aleatória.
-            Return:
-                - value (string): Piada aleatória.
-        '''
-        url = self.__build_url('/jokes/random')
-        response = requests.get(url=url).json()
-
-        if response.get('status'):
-            if response['status'] == 404:
-                return (404, response['message'])
-
-        return response['value']
-    
-    def get_category_random_joke(self, category):
-        '''
-            Método responsável por coletar uma piada aleatória para a categoria escolhida.
+            Método responsável por coletar uma piada aleatória
             Args:
-                - category(string): Categoria da piada.
+                - url(string): URL da do endpoint da API.
             Return:
-                - value(string): Piada aleatória da categoria especificada.
+                - value(string): Piada aleatória.
         '''
-        url = self.__build_url(f'/jokes/random?category={category}')
+        url = self.__build_url(url)
         response = requests.get(url=url).json()
 
         if response.get('status'):
